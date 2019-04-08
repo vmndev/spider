@@ -1,0 +1,62 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "plugins": [
+    [
+      "/Users/ilyavmn/spider/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      {
+        "location": "/Users/ilyavmn/spider/src/pages"
+      }
+    ],
+    "/Users/ilyavmn/spider/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/ilyavmn/spider/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    "/Users/ilyavmn/spider/node_modules/react-static-plugin-sass/node.api.js",
+    "/Users/ilyavmn/spider"
+  ],
+  "paths": {
+    "ROOT": "/Users/ilyavmn/spider",
+    "SRC": "/Users/ilyavmn/spider/src",
+    "DIST": "/Users/ilyavmn/spider/dist",
+    "ASSETS": "/Users/ilyavmn/spider/dist",
+    "PLUGINS": "/Users/ilyavmn/spider/plugins",
+    "TEMP": "/Users/ilyavmn/spider/tmp",
+    "ARTIFACTS": "/Users/ilyavmn/spider/artifacts",
+    "PUBLIC": "/Users/ilyavmn/spider/public",
+    "NODE_MODULES": "/Users/ilyavmn/spider/node_modules",
+    "EXCLUDE_MODULES": "/Users/ilyavmn/spider/node_modules",
+    "PACKAGE": "/Users/ilyavmn/spider/package.json",
+    "HTML_TEMPLATE": "/Users/ilyavmn/spider/dist/index.html",
+    "STATIC_DATA": "/Users/ilyavmn/spider/dist/staticData"
+  },
+  "siteRoot": "",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "http://localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}

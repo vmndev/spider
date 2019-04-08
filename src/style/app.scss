@@ -1,0 +1,36 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body{
+  // font-family: 'Heebo', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+
+a{
+  text-decoration: none;
+  color: #444;
+}
+header{
+  display: flex;
+  height: 52px;
+  justify-content: space-between;
+  align-items: center;
+  .navigation-links{
+    display: flex;
+    flex-direction: row;
+  }
+  .hamburger{
+    display: none;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    .patty{
+      width: 40px;
+      height: 10px;
+      margin: 0 0 5px;
+      background: #444;
+    }
+  }
+}
