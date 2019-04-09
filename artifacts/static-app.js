@@ -225,11 +225,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(17);
+var _propTypes = __webpack_require__(19);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(18);
+var _hoistNonReactStatics = __webpack_require__(20);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -687,54 +687,58 @@ var Router = __webpack_require__(1);
   return external_react_default.a.createElement("div", null, "This is a dynamic page! It will not be statically exported, but is available at runtime");
 });
 // EXTERNAL MODULE: external "@babel/runtime/helpers/classCallCheck"
-var classCallCheck_ = __webpack_require__(25);
+var classCallCheck_ = __webpack_require__(27);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/createClass"
-var createClass_ = __webpack_require__(26);
+var createClass_ = __webpack_require__(28);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/possibleConstructorReturn"
-var possibleConstructorReturn_ = __webpack_require__(27);
+var possibleConstructorReturn_ = __webpack_require__(29);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/getPrototypeOf"
-var getPrototypeOf_ = __webpack_require__(28);
+var getPrototypeOf_ = __webpack_require__(30);
 var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/assertThisInitialized"
-var assertThisInitialized_ = __webpack_require__(29);
+var assertThisInitialized_ = __webpack_require__(14);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/inherits"
-var inherits_ = __webpack_require__(30);
+var inherits_ = __webpack_require__(31);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/defineProperty"
-var defineProperty_ = __webpack_require__(31);
+var defineProperty_ = __webpack_require__(15);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty_);
 
 // CONCATENATED MODULE: /Users/ilyavmn/spider/src/components/Navigation.js
 
 
 
-var Navigation_Navigation = function Navigation() {
+var Navigation_Navigation = function Navigation(props) {
+  var closeMenu = props.closeMenu;
   return external_react_default.a.createElement("ul", {
     className: "navigation-links"
   }, external_react_default.a.createElement(Router["a" /* Link */], {
+    onClick: closeMenu,
     to: "/"
   }, external_react_default.a.createElement("li", null, "Home")), external_react_default.a.createElement(Router["a" /* Link */], {
+    onClick: closeMenu,
     to: "/about"
   }, external_react_default.a.createElement("li", null, "About")), external_react_default.a.createElement(Router["a" /* Link */], {
+    onClick: closeMenu,
     to: "/blog"
   }, external_react_default.a.createElement("li", null, "Blog")), external_react_default.a.createElement(Router["a" /* Link */], {
+    onClick: closeMenu,
     to: "/dynamic"
   }, external_react_default.a.createElement("li", null, "Dynamic")));
 };
 
 /* harmony default export */ var components_Navigation = (Navigation_Navigation);
 // CONCATENATED MODULE: /Users/ilyavmn/spider/src/components/Hamburger.js
-
 
 
 var Hamburger_Hamburger = function Hamburger(props) {
@@ -752,6 +756,7 @@ var Hamburger_Hamburger = function Hamburger(props) {
 
 /* harmony default export */ var components_Hamburger = (Hamburger_Hamburger);
 // CONCATENATED MODULE: /Users/ilyavmn/spider/src/containers/Header.js
+
 
 
 
@@ -781,6 +786,12 @@ function (_Component) {
       });
     });
 
+    defineProperty_default()(assertThisInitialized_default()(_this), "closeMenu", function () {
+      _this.setState({
+        isMenuOpen: false
+      });
+    });
+
     _this.state = {
       isMenuOpen: false
     };
@@ -797,7 +808,9 @@ function (_Component) {
         className: "logo",
         alt: "spidermesh logo",
         src: "https://via.placeholder.com/150x50"
-      }), external_react_default.a.createElement(components_Navigation, null), external_react_default.a.createElement(components_Hamburger, {
+      }), external_react_default.a.createElement(components_Navigation, {
+        closeMenu: this.closeMenu
+      }), external_react_default.a.createElement(components_Hamburger, {
         onClick: this.handleHamburgerClick
       }));
     }
@@ -1143,11 +1156,23 @@ module.exports = require("react-dom");
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/assertThisInitialized");
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/defineProperty");
+
+/***/ }),
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
 /* harmony import */ var _node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
  // Plugins
@@ -1177,13 +1202,13 @@ var plugins = [{
 /* harmony default export */ __webpack_exports__["default"] = (plugins);
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/ilyavmn/spider/node_modules/react-static/lib/browser");
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1223,7 +1248,7 @@ var universalOptions = {
 var t_0 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "../src/pages/404.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | src/pages/404 */).then(__webpack_require__.bind(null, 19))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | src/pages/404 */).then(__webpack_require__.bind(null, 21))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1231,7 +1256,7 @@ var t_0 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_inde
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '../src/pages/404.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(19);
+    return /*require.resolve*/(21);
   },
   chunkName: function chunkName() {
     return "src/pages/404";
@@ -1241,7 +1266,7 @@ t_0.template = '../src/pages/404.js';
 var t_1 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "../src/pages/about.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | src/pages/about */).then(__webpack_require__.bind(null, 20))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | src/pages/about */).then(__webpack_require__.bind(null, 22))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1249,7 +1274,7 @@ var t_1 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_inde
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '../src/pages/about.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(20);
+    return /*require.resolve*/(22);
   },
   chunkName: function chunkName() {
     return "src/pages/about";
@@ -1259,7 +1284,7 @@ t_1.template = '../src/pages/about.js';
 var t_2 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "../src/pages/blog.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | src/pages/blog */).then(__webpack_require__.bind(null, 21))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | src/pages/blog */).then(__webpack_require__.bind(null, 23))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1267,7 +1292,7 @@ var t_2 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_inde
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '../src/pages/blog.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(21);
+    return /*require.resolve*/(23);
   },
   chunkName: function chunkName() {
     return "src/pages/blog";
@@ -1277,7 +1302,7 @@ t_2.template = '../src/pages/blog.js';
 var t_3 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "../src/pages/index.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | src/pages/index */).then(__webpack_require__.bind(null, 22))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | src/pages/index */).then(__webpack_require__.bind(null, 24))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1285,7 +1310,7 @@ var t_3 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_inde
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '../src/pages/index.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(22);
+    return /*require.resolve*/(24);
   },
   chunkName: function chunkName() {
     return "src/pages/index";
@@ -1295,7 +1320,7 @@ t_3.template = '../src/pages/index.js';
 var t_4 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "../src/containers/Post",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | src/containers/Post */).then(__webpack_require__.bind(null, 23))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | src/containers/Post */).then(__webpack_require__.bind(null, 25))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1303,7 +1328,7 @@ var t_4 = _Users_ilyavmn_spider_node_modules_react_universal_component_dist_inde
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '../src/containers/Post');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(23);
+    return /*require.resolve*/(25);
   },
   chunkName: function chunkName() {
     return "src/containers/Post";
@@ -1323,19 +1348,19 @@ var notFoundTemplate = "../src/pages/404.js";
 /* WEBPACK VAR INJECTION */}.call(this, "/"))
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("hoist-non-react-statics");
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1348,7 +1373,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1361,7 +1386,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1396,7 +1421,7 @@ function Blog() {
 }
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1413,7 +1438,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1438,7 +1463,7 @@ function Post() {
 }
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1564,46 +1589,34 @@ var _default = function _default(_ref) {
 exports["default"] = _default;
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/classCallCheck");
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/createClass");
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/possibleConstructorReturn");
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/getPrototypeOf");
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/assertThisInitialized");
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/inherits");
-
-/***/ }),
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/defineProperty");
+module.exports = require("@babel/runtime/helpers/inherits");
 
 /***/ }),
 /* 32 */
@@ -1622,16 +1635,16 @@ module.exports = __webpack_require__(40);
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var plugins = __webpack_require__(14)["default"];
+var plugins = __webpack_require__(16)["default"];
 
-var _require = __webpack_require__(15),
+var _require = __webpack_require__(17),
     registerPlugins = _require.registerPlugins;
 
 registerPlugins(plugins);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/Users/ilyavmn/spider/artifacts/react-static-browser-plugins.js", function () {
-    registerPlugins(__webpack_require__(14)["default"]);
+    registerPlugins(__webpack_require__(16)["default"]);
   });
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
@@ -1644,10 +1657,10 @@ if (typeof document !== 'undefined' && module && module.hot) {
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var _require = __webpack_require__(15),
+var _require = __webpack_require__(17),
     registerTemplates = _require.registerTemplates;
 
-var _require2 = __webpack_require__(16),
+var _require2 = __webpack_require__(18),
     templates = _require2["default"],
     notFoundTemplate = _require2.notFoundTemplate;
 
@@ -1655,7 +1668,7 @@ registerTemplates(templates, notFoundTemplate);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/Users/ilyavmn/spider/artifacts/react-static-templates.js", function () {
-    var _require3 = __webpack_require__(16),
+    var _require3 = __webpack_require__(18),
         templates = _require3["default"],
         notFoundTemplate = _require3.notFoundTemplate;
 
@@ -1941,7 +1954,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(17);
+var _propTypes = __webpack_require__(19);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -2033,7 +2046,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.__handleAfter = exports.__update = undefined;
 
-var _hoistNonReactStatics = __webpack_require__(18);
+var _hoistNonReactStatics = __webpack_require__(20);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -2256,7 +2269,7 @@ exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Upd
 
 exports = module.exports = __webpack_require__(12)(false);
 // Module
-exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-family: 'Quicksand', sans-serif;\n  color: #444; }\n\na {\n  text-decoration: none;\n  color: #444; }\n\nheader {\n  display: flex;\n  height: 52px;\n  justify-content: space-between;\n  align-items: center; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: row; }\n  header .hamburger {\n    display: none;\n    width: 40px;\n    height: 30px;\n    flex-direction: column; }\n    header .hamburger .patty {\n      width: 40px;\n      height: 10px;\n      margin: 0 0 5px;\n      background: #444; }\n", ""]);
+exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-family: 'Quicksand', sans-serif;\n  color: #444; }\n\na {\n  text-decoration: none;\n  color: #444; }\n\nheader {\n  display: flex;\n  height: 52px;\n  padding: 0 20px;\n  justify-content: space-between;\n  align-items: center; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: row;\n    width: 50%;\n    justify-content: space-evenly; }\n    header .navigation-links a[aria-current] {\n      font-weight: 500; }\n  header .hamburger {\n    display: none;\n    width: 40px;\n    height: 30px;\n    flex-direction: column; }\n    header .hamburger .patty {\n      width: 40px;\n      height: 10px;\n      margin: 0 0 5px;\n      background: #444; }\n", ""]);
 
 
 
@@ -2266,7 +2279,7 @@ exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-fam
 
 exports = module.exports = __webpack_require__(12)(false);
 // Module
-exports.push([module.i, "@media only screen and (max-width: 960px) {\n  header .logo {\n    z-index: 3; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: fixed;\n    top: 0;\n    transform: translateX(100%);\n    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);\n    background: #fff;\n    z-index: 1;\n    padding: 76px 20px;\n    width: 100%;\n    height: 100vh;\n    box-sizing: border-box; }\n    header .navigation-links a {\n      padding: 1rem;\n      font-size: 1.4rem; }\n  header .hamburger {\n    display: block;\n    position: relative;\n    z-index: 1;\n    -webkit-user-select: none;\n    user-select: none; }\n    header .hamburger .patty {\n      display: block;\n      width: 33px;\n      height: 4px;\n      margin-bottom: 5px;\n      position: relative;\n      background: #cdcdcd;\n      border-radius: 3px;\n      z-index: 1;\n      transform-origin: 4px 0px;\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n      header .hamburger .patty:first-child {\n        transform-origin: 0% 0%; }\n      header .hamburger .patty:nth-child(3) {\n        transform-origin: 0% 100%; }\n  header.menu-open img {\n    position: fixed;\n    z-index: 3; }\n  header.menu-open .navigation-links {\n    transform: translate(0, 0); }\n  header.menu-open .hamburger {\n    position: fixed;\n    right: 0; }\n    header.menu-open .hamburger .patty {\n      opacity: 1;\n      transform: rotate(45deg) translate(-2px, -1px);\n      background: #232323; }\n      header.menu-open .hamburger .patty:nth-child(2) {\n        opacity: 0;\n        transform: rotate(0deg) scale(0.2, 0.2); }\n      header.menu-open .hamburger .patty:nth-child(3) {\n        transform: rotate(-45deg) translate(-2px, 0px); } }\n\n/* \n * Transform all the slices of hamburger\n * into a crossmark.\n */\n/*\n * But let's hide the middle one.\n */\n/*\n * Ohyeah and the last one should go the other direction\n */\n/*\n * Make this absolute positioned\n * at the top left of the screen\n */\n", ""]);
+exports.push([module.i, "@media only screen and (max-width: 639px) {\n  header .logo {\n    z-index: 3; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: fixed;\n    justify-content: flex-start;\n    top: 0;\n    left: 0;\n    transform: translateX(100%);\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\n    background: #fff;\n    z-index: 1;\n    padding: 76px 20px;\n    width: 100%;\n    height: 100vh;\n    box-sizing: border-box; }\n    header .navigation-links a {\n      padding: 1rem;\n      font-size: 1.4rem; }\n    header .navigation-links:after {\n      content: '';\n      background: inherit;\n      width: 100px;\n      height: 100vh;\n      position: absolute;\n      top: 0;\n      right: -100px; }\n  header .hamburger {\n    display: block;\n    position: relative;\n    z-index: 1;\n    -webkit-user-select: none;\n    user-select: none; }\n    header .hamburger .patty {\n      display: block;\n      width: 33px;\n      height: 4px;\n      margin-bottom: 5px;\n      position: relative;\n      background: #444;\n      border-radius: 3px;\n      z-index: 1;\n      transform-origin: 4px 0px;\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n      header .hamburger .patty:first-child {\n        transform-origin: 0% 0%; }\n      header .hamburger .patty:nth-child(3) {\n        transform-origin: 0% 100%; }\n  header.menu-open img {\n    position: fixed;\n    z-index: 3; }\n  header.menu-open .navigation-links {\n    transform: translate(0, 0); }\n  header.menu-open .hamburger {\n    position: fixed;\n    right: 20px; }\n    header.menu-open .hamburger .patty {\n      opacity: 1;\n      transform: rotate(45deg) translate(2px, -6px);\n      background: #444; }\n      header.menu-open .hamburger .patty:nth-child(2) {\n        opacity: 0;\n        transform: rotate(0deg) scale(0.2, 0.2); }\n      header.menu-open .hamburger .patty:nth-child(3) {\n        transform: rotate(-45deg) translate(3px, 5px); } }\n\n/* \n * Transform all the slices of hamburger\n * into a crossmark.\n */\n/*\n * But let's hide the middle one.\n */\n/*\n * Ohyeah and the last one should go the other direction\n */\n/*\n * Make this absolute positioned\n * at the top left of the screen\n */\n", ""]);
 
 
 

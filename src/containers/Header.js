@@ -28,7 +28,7 @@ class Header extends Component{
         const { isMenuOpen } = this.state;
         return(
             <header className={`${!!isMenuOpen && 'menu-open'}`}>   
-                <img className="logo" alt="spidermesh logo" src="https://via.placeholder.com/150x50" />
+                <Link onClick={this.closeMenu} to="/"><img className="logo" alt="spidermesh logo" src="https://via.placeholder.com/150x50" /></Link>
                 <Navigation closeMenu={this.closeMenu} />
                 <Hamburger onClick={this.handleHamburgerClick} />
             </header>

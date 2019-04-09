@@ -1,5 +1,6 @@
 * {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body{
@@ -12,9 +13,20 @@ a{
   text-decoration: none;
   color: #444;
 }
+h1 {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+}
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
 header{
+  position: absolute;
   display: flex;
-  height: 52px;
+  height: 70px;
+  width: 100%;
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
@@ -38,5 +50,11 @@ header{
       margin: 0 0 5px;
       background: #444;
     }
+  }
+}
+content{
+  display: block;
+  .content-wrapper{
+    padding: 70px 0 0;
   }
 }
