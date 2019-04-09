@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'components/Router';
 
-const Navigation = () => {
+const Navigation = (props) => {
+    const { closeMenu } = props;
     return(
         <ul className={`navigation-links`}>
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/about"><li>About</li></Link>
-          <Link to="/blog"><li>Blog</li></Link>
-          <Link to="/dynamic"><li>Dynamic</li></Link>
+          <Link onClick={closeMenu} to="/"><li>Home</li></Link>
+          <Link onClick={closeMenu} to="/about"><li>About</li></Link>
+          <Link onClick={closeMenu} to="/blog"><li>Blog</li></Link>
+          <Link onClick={closeMenu} to="/dynamic"><li>Dynamic</li></Link>
         </ul>
     )
 }

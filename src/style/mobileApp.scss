@@ -1,23 +1,36 @@
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 639px){
     header{
-        img{
+        .logo{
             z-index: 3;
         }
         .navigation-links {
             display: flex;
             flex-direction: column;
+            align-items: center;
             position: fixed;
+            justify-content: flex-start;
             top: 0;
+            left: 0;
             transform: translateX(100%);
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
             background: #fff;
             z-index: 1;
-            padding: 50px 20px;
+            padding: 76px 20px;
             width: 100%;
             height: 100vh;
             box-sizing: border-box;
             a{
                 padding: 1rem;
+                font-size: 1.4rem;
+            }
+            &:after{
+                content: '';
+                background: inherit;
+                width: 100px;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                right: -100px;
             }
         }
         .hamburger{
@@ -37,7 +50,7 @@
                 margin-bottom: 5px;
                 position: relative;
                 
-                background: #cdcdcd;
+                background: #444;
                 border-radius: 3px;
                 
                 z-index: 1;
@@ -66,17 +79,17 @@
             }
             .hamburger{
                 position: fixed;
-                right: 0;
+                right: 20px;
                 .patty{
                     opacity: 1;
-                    transform: rotate(45deg) translate(-2px, -1px);
-                    background: #232323;
+                    transform: rotate(45deg) translate(2px, -6px);
+                    background: #444;
                     &:nth-child(2){
                         opacity: 0;
                         transform: rotate(0deg) scale(0.2, 0.2);
                     }
                     &:nth-child(3){
-                        transform: rotate(-45deg) translate(-2px, 0px);
+                        transform: rotate(-45deg) translate(3px, 5px);
                     }
                 }
             }

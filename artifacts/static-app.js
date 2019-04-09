@@ -110,7 +110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -121,18 +121,6 @@ module.exports = require("react");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("path");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("babel-plugin-universal-import/universalImport");
-
-/***/ }),
-/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -143,6 +131,18 @@ module.exports = require("babel-plugin-universal-import/universalImport");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _reach_router__WEBPACK_IMPORTED_MODULE_0__["Router"]; });
 
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-plugin-universal-import/universalImport");
 
 /***/ }),
 /* 4 */
@@ -196,7 +196,7 @@ var _createClass = function () {
   };
 }();
 
-var _requireUniversalModule = __webpack_require__(28);
+var _requireUniversalModule = __webpack_require__(35);
 
 Object.defineProperty(exports, 'CHUNK_NAMES', {
   enumerable: true,
@@ -211,7 +211,7 @@ Object.defineProperty(exports, 'MODULE_IDS', {
   }
 });
 
-var _reportChunks = __webpack_require__(30);
+var _reportChunks = __webpack_require__(37);
 
 Object.defineProperty(exports, 'ReportChunks', {
   enumerable: true,
@@ -233,13 +233,13 @@ var _hoistNonReactStatics = __webpack_require__(18);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _vm = __webpack_require__(31);
+var _vm = __webpack_require__(38);
 
 var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
 
 var _utils = __webpack_require__(11);
 
-var _helpers = __webpack_require__(32);
+var _helpers = __webpack_require__(39);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -651,7 +651,7 @@ var _utils = __webpack_require__(11);
 
 var requireById = function requireById(id) {
   if (!(0, _utils.isWebpack)() && typeof id === 'string') {
-    return __webpack_require__(29)("" + id);
+    return __webpack_require__(36)("" + id);
   }
 
   return __webpack_require__('' + id);
@@ -679,25 +679,147 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_react_static_ = __webpack_require__(4);
 
 // EXTERNAL MODULE: /Users/ilyavmn/spider/src/components/Router.js
-var Router = __webpack_require__(3);
+var Router = __webpack_require__(1);
 
 // CONCATENATED MODULE: /Users/ilyavmn/spider/src/containers/Dynamic.js
 
 /* harmony default export */ var Dynamic = (function () {
   return external_react_default.a.createElement("div", null, "This is a dynamic page! It will not be statically exported, but is available at runtime");
 });
+// EXTERNAL MODULE: external "@babel/runtime/helpers/classCallCheck"
+var classCallCheck_ = __webpack_require__(25);
+var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/createClass"
+var createClass_ = __webpack_require__(26);
+var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/possibleConstructorReturn"
+var possibleConstructorReturn_ = __webpack_require__(27);
+var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/getPrototypeOf"
+var getPrototypeOf_ = __webpack_require__(28);
+var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/assertThisInitialized"
+var assertThisInitialized_ = __webpack_require__(29);
+var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/inherits"
+var inherits_ = __webpack_require__(30);
+var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits_);
+
+// EXTERNAL MODULE: external "@babel/runtime/helpers/defineProperty"
+var defineProperty_ = __webpack_require__(31);
+var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty_);
+
+// CONCATENATED MODULE: /Users/ilyavmn/spider/src/components/Navigation.js
+
+
+
+var Navigation_Navigation = function Navigation() {
+  return external_react_default.a.createElement("ul", {
+    className: "navigation-links"
+  }, external_react_default.a.createElement(Router["a" /* Link */], {
+    to: "/"
+  }, external_react_default.a.createElement("li", null, "Home")), external_react_default.a.createElement(Router["a" /* Link */], {
+    to: "/about"
+  }, external_react_default.a.createElement("li", null, "About")), external_react_default.a.createElement(Router["a" /* Link */], {
+    to: "/blog"
+  }, external_react_default.a.createElement("li", null, "Blog")), external_react_default.a.createElement(Router["a" /* Link */], {
+    to: "/dynamic"
+  }, external_react_default.a.createElement("li", null, "Dynamic")));
+};
+
+/* harmony default export */ var components_Navigation = (Navigation_Navigation);
+// CONCATENATED MODULE: /Users/ilyavmn/spider/src/components/Hamburger.js
+
+
+
+var Hamburger_Hamburger = function Hamburger(props) {
+  return external_react_default.a.createElement("div", {
+    className: "hamburger",
+    onClick: props.onClick
+  }, external_react_default.a.createElement("span", {
+    className: "patty"
+  }), external_react_default.a.createElement("span", {
+    className: "patty"
+  }), external_react_default.a.createElement("span", {
+    className: "patty"
+  }));
+};
+
+/* harmony default export */ var components_Hamburger = (Hamburger_Hamburger);
+// CONCATENATED MODULE: /Users/ilyavmn/spider/src/containers/Header.js
+
+
+
+
+
+
+
+
+
+
+
+var Header_Header =
+/*#__PURE__*/
+function (_Component) {
+  inherits_default()(Header, _Component);
+
+  function Header(props) {
+    var _this;
+
+    classCallCheck_default()(this, Header);
+
+    _this = possibleConstructorReturn_default()(this, getPrototypeOf_default()(Header).call(this, props));
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "handleHamburgerClick", function () {
+      _this.setState({
+        isMenuOpen: !_this.state.isMenuOpen
+      });
+    });
+
+    _this.state = {
+      isMenuOpen: false
+    };
+    return _this;
+  }
+
+  createClass_default()(Header, [{
+    key: "render",
+    value: function render() {
+      var isMenuOpen = this.state.isMenuOpen;
+      return external_react_default.a.createElement("header", {
+        className: "".concat(!!isMenuOpen && 'menu-open')
+      }, external_react_default.a.createElement("img", {
+        className: "logo",
+        alt: "spidermesh logo",
+        src: "https://via.placeholder.com/150x50"
+      }), external_react_default.a.createElement(components_Navigation, null), external_react_default.a.createElement(components_Hamburger, {
+        onClick: this.handleHamburgerClick
+      }));
+    }
+  }]);
+
+  return Header;
+}(external_react_["Component"]);
+
+/* harmony default export */ var containers_Header = (Header_Header);
 // EXTERNAL MODULE: /Users/ilyavmn/spider/src/style/reset.scss
-var style_reset = __webpack_require__(41);
+var style_reset = __webpack_require__(48);
 
 // EXTERNAL MODULE: /Users/ilyavmn/spider/src/style/app.scss
-var app = __webpack_require__(42);
+var app = __webpack_require__(49);
 
 // EXTERNAL MODULE: /Users/ilyavmn/spider/src/style/mobileApp.scss
-var mobileApp = __webpack_require__(43);
+var mobileApp = __webpack_require__(50);
 
 // CONCATENATED MODULE: /Users/ilyavmn/spider/src/App.js
 
  //
+
 
 
 
@@ -708,15 +830,7 @@ var mobileApp = __webpack_require__(43);
 Object(external_react_static_["addPrefetchExcludes"])(['dynamic']);
 
 function App() {
-  return external_react_default.a.createElement(external_react_static_["Root"], null, external_react_default.a.createElement("nav", null, external_react_default.a.createElement(Router["a" /* Link */], {
-    to: "/"
-  }, "Home"), external_react_default.a.createElement(Router["a" /* Link */], {
-    to: "/about"
-  }, "About"), external_react_default.a.createElement(Router["a" /* Link */], {
-    to: "/blog"
-  }, "Blog"), external_react_default.a.createElement(Router["a" /* Link */], {
-    to: "/dynamic"
-  }, "Dynamic")), external_react_default.a.createElement("div", {
+  return external_react_default.a.createElement(external_react_static_["Root"], null, external_react_default.a.createElement(containers_Header, null), external_react_default.a.createElement("content", {
     className: "content"
   }, external_react_default.a.createElement(external_react_default.a.Suspense, {
     fallback: external_react_default.a.createElement("em", null, "Loading...")
@@ -1075,9 +1189,9 @@ module.exports = require("/Users/ilyavmn/spider/node_modules/react-static/lib/br
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notFoundTemplate", function() { return notFoundTemplate; });
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 /* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -1257,7 +1371,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_static__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var components_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 
  //
 
@@ -1309,7 +1423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony import */ var react_static__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_static__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var components_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 
  //
 
@@ -1451,15 +1565,57 @@ exports["default"] = _default;
 
 /***/ }),
 /* 25 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(26);
-__webpack_require__(27);
-module.exports = __webpack_require__(33);
-
+module.exports = require("@babel/runtime/helpers/classCallCheck");
 
 /***/ }),
 /* 26 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/createClass");
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/possibleConstructorReturn");
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/getPrototypeOf");
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/assertThisInitialized");
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/inherits");
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/defineProperty");
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(33);
+__webpack_require__(34);
+module.exports = __webpack_require__(40);
+
+
+/***/ }),
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1481,7 +1637,7 @@ if (typeof document !== 'undefined' && module && module.hot) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
 
 /***/ }),
-/* 27 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1509,7 +1665,7 @@ if (typeof document !== 'undefined' && module && module.hot) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
 
 /***/ }),
-/* 28 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1720,7 +1876,7 @@ var getConfig = function getConfig(isDynamic, universalConfig, options, props) {
 };
 
 /***/ }),
-/* 29 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -1748,10 +1904,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 29;
+webpackContext.id = 36;
 
 /***/ }),
-/* 30 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1860,13 +2016,13 @@ ReportChunks.childContextTypes = {
 exports["default"] = ReportChunks;
 
 /***/ }),
-/* 31 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("vm");
 
 /***/ }),
-/* 32 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1933,28 +2089,28 @@ var __handleAfter = exports.__handleAfter = function __handleAfter(props, state,
 };
 
 /***/ }),
-/* 33 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(34);
+var _interopRequireWildcard = __webpack_require__(41);
 
-var _interopRequireDefault = __webpack_require__(35);
+var _interopRequireDefault = __webpack_require__(42);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(36));
+var _extends2 = _interopRequireDefault(__webpack_require__(43));
 
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(37));
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(44));
 
 var React = _interopRequireWildcard(__webpack_require__(0));
 
-var _useStaticInfo = __webpack_require__(38);
+var _useStaticInfo = __webpack_require__(45);
 /* eslint-disable import/no-dynamic-require */
 
 
@@ -1975,7 +2131,7 @@ function Suspense(_ref) {
 React.Suspense = Suspense;
 React["default"].Suspense = Suspense;
 
-var App = __webpack_require__(39)["default"];
+var App = __webpack_require__(46)["default"];
 
 var _default = function _default(staticInfo) {
   return function (props) {
@@ -1988,37 +2144,37 @@ var _default = function _default(staticInfo) {
 exports["default"] = _default;
 
 /***/ }),
-/* 34 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireWildcard");
 
 /***/ }),
-/* 35 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireDefault");
 
 /***/ }),
-/* 36 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/extends");
 
 /***/ }),
-/* 37 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/objectWithoutProperties");
 
 /***/ }),
-/* 38 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/ilyavmn/spider/node_modules/react-static/lib/browser/hooks/useStaticInfo");
 
 /***/ }),
-/* 39 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2052,10 +2208,10 @@ if (typeof document !== 'undefined') {
     });
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(40)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(47)(module)))
 
 /***/ }),
-/* 40 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function (originalModule) {
@@ -2085,32 +2241,32 @@ module.exports = function (originalModule) {
 };
 
 /***/ }),
-/* 41 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(false);
 // Module
-exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Updated: 2010-09-17\nAuthor: Richard Clark - http://richclarkdesign.com \nTwitter: @rich_clark\n*/\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\nabbr, address, cite, code,\ndel, dfn, em, img, ins, kbd, q, samp,\nsmall, strong, sub, sup, var,\nb, i,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\nbody {\n  line-height: 1; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nnav ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\n/* change colours to suit your needs */\nins {\n  background-color: #ff9;\n  color: #000;\n  text-decoration: none; }\n\n/* change colours to suit your needs */\nmark {\n  background-color: #ff9;\n  color: #000;\n  font-style: italic;\n  font-weight: bold; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted;\n  cursor: help; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* change border colour to suit your needs */\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #cccccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n", ""]);
+exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Updated: 2010-09-17\nAuthor: Richard Clark - http://richclarkdesign.com \nTwitter: @rich_clark\n*/\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\nabbr, address, cite, code,\ndel, dfn, em, img, ins, kbd, q, samp,\nsmall, strong, sub, sup, var,\nb, i,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\nbody {\n  line-height: 1;\n  box-sizing: border-box; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\n/* change colours to suit your needs */\nins {\n  background-color: #ff9;\n  color: #000;\n  text-decoration: none; }\n\n/* change colours to suit your needs */\nmark {\n  background-color: #ff9;\n  color: #000;\n  font-style: italic;\n  font-weight: bold; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted;\n  cursor: help; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* change border colour to suit your needs */\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #cccccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n", ""]);
 
 
 
 /***/ }),
-/* 42 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(false);
 // Module
-exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\n  font-weight: 300;\n  font-size: 16px;\n  margin: 0;\n  padding: 0; }\n\na {\n  text-decoration: none;\n  color: #108db8;\n  font-weight: bold; }\n\nimg {\n  max-width: 100%; }\n\nnav {\n  width: 100%;\n  background: #108db8; }\n\nnav a {\n  color: white;\n  padding: 1rem;\n  display: inline-block; }\n\n.content {\n  padding: 1rem; }\n", ""]);
+exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-family: 'Quicksand', sans-serif;\n  color: #444; }\n\na {\n  text-decoration: none;\n  color: #444; }\n\nheader {\n  display: flex;\n  height: 52px;\n  justify-content: space-between;\n  align-items: center; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: row; }\n  header .hamburger {\n    display: none;\n    width: 40px;\n    height: 30px;\n    flex-direction: column; }\n    header .hamburger .patty {\n      width: 40px;\n      height: 10px;\n      margin: 0 0 5px;\n      background: #444; }\n", ""]);
 
 
 
 /***/ }),
-/* 43 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(false);
 // Module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "@media only screen and (max-width: 960px) {\n  header .logo {\n    z-index: 3; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: fixed;\n    top: 0;\n    transform: translateX(100%);\n    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);\n    background: #fff;\n    z-index: 1;\n    padding: 76px 20px;\n    width: 100%;\n    height: 100vh;\n    box-sizing: border-box; }\n    header .navigation-links a {\n      padding: 1rem;\n      font-size: 1.4rem; }\n  header .hamburger {\n    display: block;\n    position: relative;\n    z-index: 1;\n    -webkit-user-select: none;\n    user-select: none; }\n    header .hamburger .patty {\n      display: block;\n      width: 33px;\n      height: 4px;\n      margin-bottom: 5px;\n      position: relative;\n      background: #cdcdcd;\n      border-radius: 3px;\n      z-index: 1;\n      transform-origin: 4px 0px;\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n      header .hamburger .patty:first-child {\n        transform-origin: 0% 0%; }\n      header .hamburger .patty:nth-child(3) {\n        transform-origin: 0% 100%; }\n  header.menu-open img {\n    position: fixed;\n    z-index: 3; }\n  header.menu-open .navigation-links {\n    transform: translate(0, 0); }\n  header.menu-open .hamburger {\n    position: fixed;\n    right: 0; }\n    header.menu-open .hamburger .patty {\n      opacity: 1;\n      transform: rotate(45deg) translate(-2px, -1px);\n      background: #232323; }\n      header.menu-open .hamburger .patty:nth-child(2) {\n        opacity: 0;\n        transform: rotate(0deg) scale(0.2, 0.2); }\n      header.menu-open .hamburger .patty:nth-child(3) {\n        transform: rotate(-45deg) translate(-2px, 0px); } }\n\n/* \n * Transform all the slices of hamburger\n * into a crossmark.\n */\n/*\n * But let's hide the middle one.\n */\n/*\n * Ohyeah and the last one should go the other direction\n */\n/*\n * Make this absolute positioned\n * at the top left of the screen\n */\n", ""]);
 
 
 

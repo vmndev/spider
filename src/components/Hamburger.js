@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'components/Router';
 
 const Hamburger = (props) => {
     return(

@@ -15,11 +15,17 @@ a{
 header{
   display: flex;
   height: 52px;
+  padding: 0 20px;
   justify-content: space-between;
   align-items: center;
   .navigation-links{
     display: flex;
     flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+    a[aria-current]{
+      font-weight: 500;
+    }
   }
   .hamburger{
     display: none;
