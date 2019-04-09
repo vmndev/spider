@@ -157,7 +157,7 @@ module.exports = require("react-static");
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 
-var _typeof = __webpack_require__(10);
+var _typeof = __webpack_require__(11);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -237,7 +237,7 @@ var _vm = __webpack_require__(38);
 
 var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
 
-var _utils = __webpack_require__(11);
+var _utils = __webpack_require__(12);
 
 var _helpers = __webpack_require__(39);
 
@@ -634,7 +634,7 @@ function universal(asyncModule) {
     report: _propTypes2["default"].func
   }, _temp;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)(module)))
 
 /***/ }),
 /* 6 */
@@ -647,7 +647,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(11);
+var _utils = __webpack_require__(12);
 
 var requireById = function requireById(id) {
   if (!(0, _utils.isWebpack)() && typeof id === 'string') {
@@ -667,6 +667,97 @@ module.exports = require("@reach/router");
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
+
+/***/ }),
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -804,11 +895,14 @@ function (_Component) {
       var isMenuOpen = this.state.isMenuOpen;
       return external_react_default.a.createElement("header", {
         className: "".concat(!!isMenuOpen && 'menu-open')
+      }, external_react_default.a.createElement(Router["a" /* Link */], {
+        onClick: this.closeMenu,
+        to: "/"
       }, external_react_default.a.createElement("img", {
         className: "logo",
         alt: "spidermesh logo",
         src: "https://via.placeholder.com/150x50"
-      }), external_react_default.a.createElement(components_Navigation, {
+      })), external_react_default.a.createElement(components_Navigation, {
         closeMenu: this.closeMenu
       }), external_react_default.a.createElement(components_Hamburger, {
         onClick: this.handleHamburgerClick
@@ -857,7 +951,7 @@ function App() {
 /* harmony default export */ var src_App = __webpack_exports__["a"] = (App);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = function (module) {
@@ -886,19 +980,19 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/typeof");
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof2 = __webpack_require__(10);
+var _typeof2 = __webpack_require__(11);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1056,97 +1150,6 @@ var loadFromPromiseCache = exports.loadFromPromiseCache = function loadFromPromi
 var cacheProm = exports.cacheProm = function cacheProm(pr, chunkName, props, promisecache) {
   return promisecache[callForString(chunkName, props)] = pr;
 };
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
-
-      if (item[2]) {
-        return '@media ' + item[2] + '{' + content + '}';
-      } else {
-        return content;
-      }
-    }).join('');
-  }; // import a list of modules into the list
-
-
-  list.i = function (modules, mediaQuery) {
-    if (typeof modules === 'string') {
-      modules = [[null, modules, '']];
-    }
-
-    var alreadyImportedModules = {};
-
-    for (var i = 0; i < this.length; i++) {
-      var id = this[i][0];
-
-      if (id != null) {
-        alreadyImportedModules[id] = true;
-      }
-    }
-
-    for (i = 0; i < modules.length; i++) {
-      var item = modules[i]; // skip already imported module
-      // this implementation is not 100% perfect for weird media query combinations
-      // when a module is imported multiple times with different media queries.
-      // I hope this will never occur (Hey this way we have smaller bundles)
-
-      if (item[0] == null || !alreadyImportedModules[item[0]]) {
-        if (mediaQuery && !item[2]) {
-          item[2] = mediaQuery;
-        } else if (mediaQuery) {
-          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
-        }
-
-        list.push(item);
-      }
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || '';
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-  return '/*# ' + data + ' */';
-}
 
 /***/ }),
 /* 13 */
@@ -1428,13 +1431,22 @@ function Blog() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      textAlign: 'center'
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to React-Static"));
+    className: "home content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "World of 3D content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "a sdf asdf asdf asdf asdf"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+    id: "771d28cf-a92a-45b7-8c59-8bea0060faa5",
+    src: "https://www.vectary.com/embed/viewer/viewer.html?model=771d28cf-a92a-45b7-8c59-8bea0060faa5&env=monkforest",
+    frameBorder: "0",
+    width: "100%",
+    height: "480"
+  })));
 });
 
 /***/ }),
@@ -1647,7 +1659,7 @@ if (typeof document !== 'undefined' && module && module.hot) {
     registerPlugins(__webpack_require__(16)["default"]);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)(module)))
 
 /***/ }),
 /* 34 */
@@ -1675,7 +1687,7 @@ if (typeof document !== 'undefined' && module && module.hot) {
     registerTemplates(templates, notFoundTemplate);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(9)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)(module)))
 
 /***/ }),
 /* 35 */
@@ -1705,7 +1717,7 @@ var _extends = Object.assign || function (target) {
 
 exports["default"] = requireUniversalModule;
 
-var _utils = __webpack_require__(11);
+var _utils = __webpack_require__(12);
 
 var CHUNK_NAMES = exports.CHUNK_NAMES = new Set();
 var MODULE_IDS = exports.MODULE_IDS = new Set();
@@ -1926,7 +1938,7 @@ webpackContext.id = 36;
 "use strict";
 
 
-var _typeof = __webpack_require__(10);
+var _typeof = __webpack_require__(11);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -2196,7 +2208,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 
  // Your top level component
 
@@ -2257,9 +2269,9 @@ module.exports = function (originalModule) {
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(12)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // Module
-exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Updated: 2010-09-17\nAuthor: Richard Clark - http://richclarkdesign.com \nTwitter: @rich_clark\n*/\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\nabbr, address, cite, code,\ndel, dfn, em, img, ins, kbd, q, samp,\nsmall, strong, sub, sup, var,\nb, i,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\nbody {\n  line-height: 1;\n  box-sizing: border-box; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\n/* change colours to suit your needs */\nins {\n  background-color: #ff9;\n  color: #000;\n  text-decoration: none; }\n\n/* change colours to suit your needs */\nmark {\n  background-color: #ff9;\n  color: #000;\n  font-style: italic;\n  font-weight: bold; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted;\n  cursor: help; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* change border colour to suit your needs */\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #cccccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n", ""]);
+exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Updated: 2010-09-17\nAuthor: Richard Clark - http://richclarkdesign.com \nTwitter: @rich_clark\n*/\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\nabbr, address, cite, code,\ndel, dfn, em, img, ins, kbd, q, samp,\nsmall, strong, sub, sup, var,\nb, i,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\nbody {\n  line-height: 1; }\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\n/* change colours to suit your needs */\nins {\n  background-color: #ff9;\n  color: #000;\n  text-decoration: none; }\n\n/* change colours to suit your needs */\nmark {\n  background-color: #ff9;\n  color: #000;\n  font-style: italic;\n  font-weight: bold; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted;\n  cursor: help; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* change border colour to suit your needs */\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #cccccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n", ""]);
 
 
 
@@ -2267,9 +2279,9 @@ exports.push([module.i, "/* \nhtml5doctor.com Reset Stylesheet\nv1.6.1\nLast Upd
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(12)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // Module
-exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-family: 'Quicksand', sans-serif;\n  color: #444; }\n\na {\n  text-decoration: none;\n  color: #444; }\n\nheader {\n  display: flex;\n  height: 52px;\n  padding: 0 20px;\n  justify-content: space-between;\n  align-items: center; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: row;\n    width: 50%;\n    justify-content: space-evenly; }\n    header .navigation-links a[aria-current] {\n      font-weight: 500; }\n  header .hamburger {\n    display: none;\n    width: 40px;\n    height: 30px;\n    flex-direction: column; }\n    header .hamburger .patty {\n      width: 40px;\n      height: 10px;\n      margin: 0 0 5px;\n      background: #444; }\n", ""]);
+exports.push([module.i, "* {\n  scroll-behavior: smooth;\n  box-sizing: border-box; }\n\nbody {\n  font-family: 'Quicksand', sans-serif;\n  color: #444; }\n\na {\n  text-decoration: none;\n  color: #444; }\n\nh1 {\n  font-size: 2.2rem;\n  line-height: 2.6rem; }\n\nh2 {\n  font-size: 1.4rem;\n  line-height: 1.8rem;\n  font-weight: 500; }\n\nheader {\n  position: absolute;\n  display: flex;\n  height: 70px;\n  width: 100%;\n  padding: 0 20px;\n  justify-content: space-between;\n  align-items: center; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: row;\n    width: 50%;\n    justify-content: space-evenly; }\n    header .navigation-links a[aria-current] {\n      font-weight: 500; }\n  header .hamburger {\n    display: none;\n    width: 40px;\n    height: 30px;\n    flex-direction: column; }\n    header .hamburger .patty {\n      width: 40px;\n      height: 10px;\n      margin: 0 0 5px;\n      background: #444; }\n\ncontent {\n  display: block; }\n  content .content-wrapper {\n    padding: 70px 0 0; }\n", ""]);
 
 
 
@@ -2277,9 +2289,19 @@ exports.push([module.i, "* {\n  scroll-behavior: smooth; }\n\nbody {\n  font-fam
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(12)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // Module
-exports.push([module.i, "@media only screen and (max-width: 639px) {\n  header .logo {\n    z-index: 3; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: fixed;\n    justify-content: flex-start;\n    top: 0;\n    left: 0;\n    transform: translateX(100%);\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\n    background: #fff;\n    z-index: 1;\n    padding: 76px 20px;\n    width: 100%;\n    height: 100vh;\n    box-sizing: border-box; }\n    header .navigation-links a {\n      padding: 1rem;\n      font-size: 1.4rem; }\n    header .navigation-links:after {\n      content: '';\n      background: inherit;\n      width: 100px;\n      height: 100vh;\n      position: absolute;\n      top: 0;\n      right: -100px; }\n  header .hamburger {\n    display: block;\n    position: relative;\n    z-index: 1;\n    -webkit-user-select: none;\n    user-select: none; }\n    header .hamburger .patty {\n      display: block;\n      width: 33px;\n      height: 4px;\n      margin-bottom: 5px;\n      position: relative;\n      background: #444;\n      border-radius: 3px;\n      z-index: 1;\n      transform-origin: 4px 0px;\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n      header .hamburger .patty:first-child {\n        transform-origin: 0% 0%; }\n      header .hamburger .patty:nth-child(3) {\n        transform-origin: 0% 100%; }\n  header.menu-open img {\n    position: fixed;\n    z-index: 3; }\n  header.menu-open .navigation-links {\n    transform: translate(0, 0); }\n  header.menu-open .hamburger {\n    position: fixed;\n    right: 20px; }\n    header.menu-open .hamburger .patty {\n      opacity: 1;\n      transform: rotate(45deg) translate(2px, -6px);\n      background: #444; }\n      header.menu-open .hamburger .patty:nth-child(2) {\n        opacity: 0;\n        transform: rotate(0deg) scale(0.2, 0.2); }\n      header.menu-open .hamburger .patty:nth-child(3) {\n        transform: rotate(-45deg) translate(3px, 5px); } }\n\n/* \n * Transform all the slices of hamburger\n * into a crossmark.\n */\n/*\n * But let's hide the middle one.\n */\n/*\n * Ohyeah and the last one should go the other direction\n */\n/*\n * Make this absolute positioned\n * at the top left of the screen\n */\n", ""]);
+exports.push([module.i, "@media only screen and (max-width: 639px) {\n  header .logo {\n    position: relative;\n    z-index: 3; }\n  header .navigation-links {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: fixed;\n    justify-content: flex-start;\n    top: 0;\n    left: 0;\n    transform: translateX(100%);\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\n    background: #fff;\n    z-index: 1;\n    padding: 76px 20px;\n    width: 100%;\n    height: 100vh;\n    box-sizing: border-box; }\n    header .navigation-links a {\n      padding: 1rem;\n      font-size: 1.4rem; }\n    header .navigation-links:after {\n      content: '';\n      background: inherit;\n      width: 100px;\n      height: 100vh;\n      position: absolute;\n      top: 0;\n      right: -100px; }\n  header .hamburger {\n    display: block;\n    position: relative;\n    z-index: 1;\n    -webkit-user-select: none;\n    user-select: none; }\n    header .hamburger .patty {\n      display: block;\n      width: 33px;\n      height: 4px;\n      margin-bottom: 5px;\n      position: relative;\n      background: #444;\n      border-radius: 3px;\n      z-index: 1;\n      transform-origin: 4px 0px;\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n      header .hamburger .patty:first-child {\n        transform-origin: 0% 0%; }\n      header .hamburger .patty:nth-child(3) {\n        transform-origin: 0% 100%; }\n  header.menu-open .logo {\n    position: fixed;\n    top: 9px; }\n  header.menu-open .navigation-links {\n    transform: translate(0, 0); }\n  header.menu-open .hamburger {\n    position: fixed;\n    right: 20px; }\n    header.menu-open .hamburger .patty {\n      opacity: 1;\n      transform: rotate(45deg) translate(2px, -6px);\n      background: #444; }\n      header.menu-open .hamburger .patty:nth-child(2) {\n        opacity: 0;\n        transform: rotate(0deg) scale(0.2, 0.2); }\n      header.menu-open .hamburger .patty:nth-child(3) {\n        transform: rotate(-45deg) translate(3px, 5px); } }\n\n/* \n * Transform all the slices of hamburger\n * into a crossmark.\n */\n/*\n * But let's hide the middle one.\n */\n/*\n * Ohyeah and the last one should go the other direction\n */\n/*\n * Make this absolute positioned\n * at the top left of the screen\n */\n", ""]);
+
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Module
+exports.push([module.i, ".home {\n  background: #c5c5c5; }\n  .home .hero {\n    width: 100%;\n    height: 80vh;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 24px 0 0;\n    color: #fff; }\n    .home .hero h2 {\n      margin: 0 0 24px; }\n  .home iframe {\n    border: 1px solid #d6d6d6;\n    width: 90vw;\n    padding: 0px;\n    height: 300px;\n    border-radius: 3px;\n    background: radial-gradient(#ffffff, #949494); }\n", ""]);
 
 
 
