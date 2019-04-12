@@ -1,4 +1,4 @@
-.home{
+.content-wrapper{
     background: linear-gradient(270deg, #636ab6, #76369c, #223cb8);
     background-size: 400% 400%;
 
@@ -19,12 +19,11 @@
         }
     }
     iframe{
-        border: 1px solid #d6d6d6;
-        width: 90vw;
+        width: 90%;
         padding: 0px;
         height: 300px;
         border-radius: 3px;
-        background: radial-gradient(#ffffff, #949494);
+        background: radial-gradient(transparent, rgba(0, 0, 0, 0.44));
     }
 }
 

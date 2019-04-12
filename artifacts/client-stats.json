@@ -2,30 +2,30 @@
   "errors": [],
   "warnings": [],
   "version": "4.29.6",
-  "hash": "5e6624c283a4c1b99656",
-  "time": 6918,
-  "builtAt": 1554835726223,
+  "hash": "12d67bc4f13529ef3f76",
+  "time": 4800,
+  "builtAt": 1554870493907,
   "publicPath": "/",
   "outputPath": "/Users/ilyavmn/spider/dist",
   "assetsByChunkName": {
     "main": [
-      "main.796ef20a.css",
-      "main.5e6624c2.js"
+      "main.61b7c881.css",
+      "main.12d67bc4.js"
     ],
     "src/containers/Post": "templates/src/containers/Post.b46d81c7.js",
     "src/pages/404": "templates/src/pages/404.07e249cf.js",
     "src/pages/about": "templates/src/pages/about.66f7bf6b.js",
     "src/pages/blog": "templates/src/pages/blog.f775d4cd.js",
     "src/pages/index": [
-      "src/pages/index.4db90ba6.css",
-      "templates/src/pages/index.4db90ba6.js"
+      "src/pages/index.35cbc007.css",
+      "templates/src/pages/index.35cbc007.js"
     ],
     "vendors~main": "templates/vendors~main.d4af48c0.js"
   },
   "assets": [
     {
-      "name": "main.5e6624c2.js",
-      "size": 8935,
+      "name": "main.12d67bc4.js",
+      "size": 8920,
       "chunks": [
         0
       ],
@@ -35,8 +35,8 @@
       "emitted": true
     },
     {
-      "name": "main.796ef20a.css",
-      "size": 3365,
+      "name": "main.61b7c881.css",
+      "size": 3266,
       "chunks": [
         0
       ],
@@ -46,8 +46,8 @@
       "emitted": true
     },
     {
-      "name": "src/pages/index.4db90ba6.css",
-      "size": 326,
+      "name": "src/pages/index.35cbc007.css",
+      "size": 884,
       "chunks": [
         5
       ],
@@ -101,7 +101,7 @@
       "emitted": true
     },
     {
-      "name": "templates/src/pages/index.4db90ba6.js",
+      "name": "templates/src/pages/index.35cbc007.js",
       "size": 617,
       "chunks": [
         5
@@ -132,8 +132,8 @@
       ],
       "assets": [
         "templates/vendors~main.d4af48c0.js",
-        "main.796ef20a.css",
-        "main.5e6624c2.js"
+        "main.61b7c881.css",
+        "main.12d67bc4.js"
       ],
       "children": {},
       "childAssets": {}
@@ -147,8 +147,8 @@
       ],
       "assets": [
         "templates/vendors~main.d4af48c0.js",
-        "main.796ef20a.css",
-        "main.5e6624c2.js"
+        "main.61b7c881.css",
+        "main.12d67bc4.js"
       ],
       "children": {},
       "childAssets": {}
@@ -188,8 +188,8 @@
         5
       ],
       "assets": [
-        "src/pages/index.4db90ba6.css",
-        "templates/src/pages/index.4db90ba6.js"
+        "src/pages/index.35cbc007.css",
+        "templates/src/pages/index.35cbc007.js"
       ],
       "children": {},
       "childAssets": {}
@@ -211,15 +211,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 13813,
+      "size": 13653,
       "names": [
         "main"
       ],
       "files": [
-        "main.796ef20a.css",
-        "main.5e6624c2.js"
+        "main.61b7c881.css",
+        "main.12d67bc4.js"
       ],
-      "hash": "796ef20a5aa4e818cca0",
+      "hash": "61b7c8810d3ffece74a5",
       "siblings": [
         6
       ],
@@ -413,7 +413,7 @@
           "name": "/Users/ilyavmn/spider/src/App.js + 4 modules",
           "index": 131,
           "index2": 139,
-          "size": 3623,
+          "size": 3608,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -648,7 +648,7 @@
               "name": "/Users/ilyavmn/spider/src/containers/Header.js",
               "index": 134,
               "index2": 132,
-              "size": 1682,
+              "size": 1667,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -711,7 +711,7 @@
               ],
               "optimizationBailout": [],
               "depth": 4,
-              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from'react';import{Link}from'components/Router';import Navigation from'components/Navigation';import Hamburger from'components/Hamburger';var Header=/*#__PURE__*/function(_Component){_inherits(Header,_Component);function Header(props){var _this;_classCallCheck(this,Header);_this=_possibleConstructorReturn(this,_getPrototypeOf(Header).call(this,props));_defineProperty(_assertThisInitialized(_this),\"handleHamburgerClick\",function(){_this.setState({isMenuOpen:!_this.state.isMenuOpen});});_defineProperty(_assertThisInitialized(_this),\"closeMenu\",function(){_this.setState({isMenuOpen:false});});_this.state={isMenuOpen:false};return _this;}_createClass(Header,[{key:\"render\",value:function render(){var isMenuOpen=this.state.isMenuOpen;return React.createElement(\"header\",{className:\"\".concat(!!isMenuOpen&&'menu-open')},React.createElement(Link,{onClick:this.closeMenu,to:\"/\"},React.createElement(\"img\",{className:\"logo\",alt:\"spidermesh logo\",src:\"https://via.placeholder.com/150x50\"})),React.createElement(Navigation,{closeMenu:this.closeMenu}),React.createElement(Hamburger,{onClick:this.handleHamburgerClick}));}}]);return Header;}(Component);export default Header;"
+              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from'react';import{Link}from'components/Router';import Navigation from'components/Navigation';import Hamburger from'components/Hamburger';var Header=/*#__PURE__*/function(_Component){_inherits(Header,_Component);function Header(props){var _this;_classCallCheck(this,Header);_this=_possibleConstructorReturn(this,_getPrototypeOf(Header).call(this,props));_defineProperty(_assertThisInitialized(_this),\"handleHamburgerClick\",function(){_this.setState({isMenuOpen:!_this.state.isMenuOpen});});_defineProperty(_assertThisInitialized(_this),\"closeMenu\",function(){_this.setState({isMenuOpen:false});});_this.state={isMenuOpen:false};return _this;}_createClass(Header,[{key:\"render\",value:function render(){var isMenuOpen=this.state.isMenuOpen;return React.createElement(\"header\",{className:\"\".concat(!!isMenuOpen&&'menu-open')},React.createElement(Link,{onClick:this.closeMenu,to:\"/\"},React.createElement(\"img\",{className:\"logo\",alt:\"spidermesh logo\",src:\"/img/logo-white.svg\"})),React.createElement(Navigation,{closeMenu:this.closeMenu}),React.createElement(Hamburger,{onClick:this.handleHamburgerClick}));}}]);return Header;}(Component);export default Header;"
             },
             {
               "id": null,
@@ -776,7 +776,7 @@
                   "moduleName": "/Users/ilyavmn/spider/src/containers/Header.js",
                   "type": "harmony import specifier",
                   "userRequest": "components/Navigation",
-                  "loc": "1:1521-1531"
+                  "loc": "1:1506-1516"
                 }
               ],
               "usedExports": [
@@ -852,7 +852,7 @@
                   "moduleName": "/Users/ilyavmn/spider/src/containers/Header.js",
                   "type": "harmony import specifier",
                   "userRequest": "components/Hamburger",
-                  "loc": "1:1580-1589"
+                  "loc": "1:1565-1574"
                 }
               ],
               "usedExports": [
@@ -1410,7 +1410,7 @@
           "name": "css /Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/app.scss",
           "index": 140,
           "index2": 135,
-          "size": 962,
+          "size": 817,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -1958,15 +1958,15 @@
       "rendered": true,
       "initial": false,
       "entry": false,
-      "size": 1039,
+      "size": 1743,
       "names": [
         "src/pages/index"
       ],
       "files": [
-        "src/pages/index.4db90ba6.css",
-        "templates/src/pages/index.4db90ba6.js"
+        "src/pages/index.35cbc007.css",
+        "templates/src/pages/index.35cbc007.js"
       ],
-      "hash": "4db90ba63727c37ae457",
+      "hash": "35cbc0070a7d88ae573a",
       "siblings": [],
       "parents": [
         0,
@@ -2111,7 +2111,7 @@
           "name": "css /Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/index.scss",
           "index": 148,
           "index2": 146,
-          "size": 452,
+          "size": 1156,
           "built": false,
           "optional": false,
           "prefetched": false,
@@ -2726,7 +2726,7 @@
               "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1501-1506"
+              "loc": "1:1486-1491"
             },
             {
               "moduleId": 21,
@@ -2735,7 +2735,7 @@
               "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1560-1565"
+              "loc": "1:1545-1550"
             },
             {
               "moduleId": 21,
@@ -2744,7 +2744,7 @@
               "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1649-1658"
+              "loc": "1:1634-1643"
             },
             {
               "moduleId": 21,
@@ -13921,7 +13921,7 @@
           "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1501-1506"
+          "loc": "1:1486-1491"
         },
         {
           "moduleId": 21,
@@ -13930,7 +13930,7 @@
           "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1560-1565"
+          "loc": "1:1545-1550"
         },
         {
           "moduleId": 21,
@@ -13939,7 +13939,7 @@
           "moduleName": "/Users/ilyavmn/spider/src/App.js + 4 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1649-1658"
+          "loc": "1:1634-1643"
         },
         {
           "moduleId": 21,
@@ -17553,7 +17553,7 @@
       "name": "/Users/ilyavmn/spider/src/App.js + 4 modules",
       "index": 131,
       "index2": 139,
-      "size": 3623,
+      "size": 3608,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -17788,7 +17788,7 @@
           "name": "/Users/ilyavmn/spider/src/containers/Header.js",
           "index": 134,
           "index2": 132,
-          "size": 1682,
+          "size": 1667,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -17851,7 +17851,7 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from'react';import{Link}from'components/Router';import Navigation from'components/Navigation';import Hamburger from'components/Hamburger';var Header=/*#__PURE__*/function(_Component){_inherits(Header,_Component);function Header(props){var _this;_classCallCheck(this,Header);_this=_possibleConstructorReturn(this,_getPrototypeOf(Header).call(this,props));_defineProperty(_assertThisInitialized(_this),\"handleHamburgerClick\",function(){_this.setState({isMenuOpen:!_this.state.isMenuOpen});});_defineProperty(_assertThisInitialized(_this),\"closeMenu\",function(){_this.setState({isMenuOpen:false});});_this.state={isMenuOpen:false};return _this;}_createClass(Header,[{key:\"render\",value:function render(){var isMenuOpen=this.state.isMenuOpen;return React.createElement(\"header\",{className:\"\".concat(!!isMenuOpen&&'menu-open')},React.createElement(Link,{onClick:this.closeMenu,to:\"/\"},React.createElement(\"img\",{className:\"logo\",alt:\"spidermesh logo\",src:\"https://via.placeholder.com/150x50\"})),React.createElement(Navigation,{closeMenu:this.closeMenu}),React.createElement(Hamburger,{onClick:this.handleHamburgerClick}));}}]);return Header;}(Component);export default Header;"
+          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from'react';import{Link}from'components/Router';import Navigation from'components/Navigation';import Hamburger from'components/Hamburger';var Header=/*#__PURE__*/function(_Component){_inherits(Header,_Component);function Header(props){var _this;_classCallCheck(this,Header);_this=_possibleConstructorReturn(this,_getPrototypeOf(Header).call(this,props));_defineProperty(_assertThisInitialized(_this),\"handleHamburgerClick\",function(){_this.setState({isMenuOpen:!_this.state.isMenuOpen});});_defineProperty(_assertThisInitialized(_this),\"closeMenu\",function(){_this.setState({isMenuOpen:false});});_this.state={isMenuOpen:false};return _this;}_createClass(Header,[{key:\"render\",value:function render(){var isMenuOpen=this.state.isMenuOpen;return React.createElement(\"header\",{className:\"\".concat(!!isMenuOpen&&'menu-open')},React.createElement(Link,{onClick:this.closeMenu,to:\"/\"},React.createElement(\"img\",{className:\"logo\",alt:\"spidermesh logo\",src:\"/img/logo-white.svg\"})),React.createElement(Navigation,{closeMenu:this.closeMenu}),React.createElement(Hamburger,{onClick:this.handleHamburgerClick}));}}]);return Header;}(Component);export default Header;"
         },
         {
           "id": null,
@@ -17916,7 +17916,7 @@
               "moduleName": "/Users/ilyavmn/spider/src/containers/Header.js",
               "type": "harmony import specifier",
               "userRequest": "components/Navigation",
-              "loc": "1:1521-1531"
+              "loc": "1:1506-1516"
             }
           ],
           "usedExports": [
@@ -17992,7 +17992,7 @@
               "moduleName": "/Users/ilyavmn/spider/src/containers/Header.js",
               "type": "harmony import specifier",
               "userRequest": "components/Hamburger",
-              "loc": "1:1580-1589"
+              "loc": "1:1565-1574"
             }
           ],
           "usedExports": [
@@ -26100,7 +26100,7 @@
       "name": "css /Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/app.scss",
       "index": 140,
       "index2": 135,
-      "size": 962,
+      "size": 817,
       "built": false,
       "optional": false,
       "prefetched": false,
@@ -26162,7 +26162,7 @@
       "name": "css /Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/index.scss",
       "index": 148,
       "index2": 146,
-      "size": 452,
+      "size": 1156,
       "built": false,
       "optional": false,
       "prefetched": false,
@@ -26383,14 +26383,14 @@
           "rendered": true,
           "initial": true,
           "entry": true,
-          "size": 3561,
+          "size": 3410,
           "names": [
             "extract-css-chunks-webpack-plugin"
           ],
           "files": [
             "*"
           ],
-          "hash": "47c17cfc049736942f7a",
+          "hash": "6986233985961638bdd3",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -26402,7 +26402,7 @@
               "name": "/Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/app.scss",
               "index": 0,
               "index2": 1,
-              "size": 1155,
+              "size": 1004,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -26435,7 +26435,7 @@
                 "ModuleConcatenation bailout: Module is not an ECMAScript module"
               ],
               "depth": 0,
-              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"* {\\n  scroll-behavior: smooth;\\n  box-sizing: border-box; }\\n\\nbody {\\n  font-family: 'Quicksand', sans-serif;\\n  color: #444; }\\n\\na {\\n  text-decoration: none;\\n  color: #444; }\\n\\nh1 {\\n  font-size: 2.2rem;\\n  line-height: 2.6rem; }\\n\\nh2 {\\n  font-size: 1.4rem;\\n  line-height: 1.8rem;\\n  font-weight: 500; }\\n\\nheader {\\n  position: absolute;\\n  display: flex;\\n  height: 70px;\\n  width: 100%;\\n  padding: 0 20px;\\n  justify-content: space-between;\\n  align-items: center; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: row;\\n    width: 50%;\\n    justify-content: space-evenly; }\\n    header .navigation-links a[aria-current] {\\n      font-weight: 500; }\\n  header .hamburger {\\n    display: none;\\n    width: 40px;\\n    height: 30px;\\n    flex-direction: column; }\\n    header .hamburger .patty {\\n      width: 40px;\\n      height: 10px;\\n      margin: 0 0 5px;\\n      background: #444; }\\n\\ncontent {\\n  display: block; }\\n  content .content-wrapper {\\n    padding: 70px 0 0; }\\n\", \"\"]);\n\n"
+              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"* {\\n  scroll-behavior: smooth;\\n  box-sizing: border-box; }\\n\\nbody {\\n  font-family: 'Quicksand', sans-serif;\\n  color: #444; }\\n\\na {\\n  text-decoration: none;\\n  color: #444; }\\n\\nh1 {\\n  font-size: 2.2rem;\\n  line-height: 2.6rem; }\\n\\nh2 {\\n  font-size: 1.4rem;\\n  line-height: 1.8rem;\\n  font-weight: 500; }\\n\\nheader {\\n  position: absolute;\\n  display: flex;\\n  height: 70px;\\n  width: 100%;\\n  padding: 0 20px;\\n  justify-content: space-between;\\n  align-items: center; }\\n  header .logo {\\n    height: 50px; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: row;\\n    width: 50%;\\n    justify-content: space-evenly; }\\n    header .navigation-links a[aria-current] {\\n      font-weight: 500; }\\n  header .hamburger {\\n    display: none; }\\n\\ncontent {\\n  display: block; }\\n  content .content-wrapper {\\n    padding: 70px 0 0; }\\n\", \"\"]);\n\n"
             },
             {
               "id": 1,
@@ -26505,7 +26505,7 @@
           "name": "/Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/app.scss",
           "index": 0,
           "index2": 1,
-          "size": 1155,
+          "size": 1004,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -26538,7 +26538,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"* {\\n  scroll-behavior: smooth;\\n  box-sizing: border-box; }\\n\\nbody {\\n  font-family: 'Quicksand', sans-serif;\\n  color: #444; }\\n\\na {\\n  text-decoration: none;\\n  color: #444; }\\n\\nh1 {\\n  font-size: 2.2rem;\\n  line-height: 2.6rem; }\\n\\nh2 {\\n  font-size: 1.4rem;\\n  line-height: 1.8rem;\\n  font-weight: 500; }\\n\\nheader {\\n  position: absolute;\\n  display: flex;\\n  height: 70px;\\n  width: 100%;\\n  padding: 0 20px;\\n  justify-content: space-between;\\n  align-items: center; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: row;\\n    width: 50%;\\n    justify-content: space-evenly; }\\n    header .navigation-links a[aria-current] {\\n      font-weight: 500; }\\n  header .hamburger {\\n    display: none;\\n    width: 40px;\\n    height: 30px;\\n    flex-direction: column; }\\n    header .hamburger .patty {\\n      width: 40px;\\n      height: 10px;\\n      margin: 0 0 5px;\\n      background: #444; }\\n\\ncontent {\\n  display: block; }\\n  content .content-wrapper {\\n    padding: 70px 0 0; }\\n\", \"\"]);\n\n"
+          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"* {\\n  scroll-behavior: smooth;\\n  box-sizing: border-box; }\\n\\nbody {\\n  font-family: 'Quicksand', sans-serif;\\n  color: #444; }\\n\\na {\\n  text-decoration: none;\\n  color: #444; }\\n\\nh1 {\\n  font-size: 2.2rem;\\n  line-height: 2.6rem; }\\n\\nh2 {\\n  font-size: 1.4rem;\\n  line-height: 1.8rem;\\n  font-weight: 500; }\\n\\nheader {\\n  position: absolute;\\n  display: flex;\\n  height: 70px;\\n  width: 100%;\\n  padding: 0 20px;\\n  justify-content: space-between;\\n  align-items: center; }\\n  header .logo {\\n    height: 50px; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: row;\\n    width: 50%;\\n    justify-content: space-evenly; }\\n    header .navigation-links a[aria-current] {\\n      font-weight: 500; }\\n  header .hamburger {\\n    display: none; }\\n\\ncontent {\\n  display: block; }\\n  content .content-wrapper {\\n    padding: 70px 0 0; }\\n\", \"\"]);\n\n"
         },
         {
           "id": 1,
@@ -26630,14 +26630,14 @@
           "rendered": true,
           "initial": true,
           "entry": true,
-          "size": 3020,
+          "size": 3751,
           "names": [
             "extract-css-chunks-webpack-plugin"
           ],
           "files": [
             "*"
           ],
-          "hash": "c7602cce83bae1beb3d7",
+          "hash": "4a09dd96d2315137ea85",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -26649,7 +26649,7 @@
               "name": "/Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/index.scss",
               "index": 0,
               "index2": 1,
-              "size": 614,
+              "size": 1345,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -26682,7 +26682,7 @@
                 "ModuleConcatenation bailout: Module is not an ECMAScript module"
               ],
               "depth": 0,
-              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \".home {\\n  background: #c5c5c5; }\\n  .home .hero {\\n    width: 100%;\\n    height: 80vh;\\n    box-sizing: border-box;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    padding: 24px 0 0;\\n    color: #fff; }\\n    .home .hero h2 {\\n      margin: 0 0 24px; }\\n  .home iframe {\\n    border: 1px solid #d6d6d6;\\n    width: 90vw;\\n    padding: 0px;\\n    height: 300px;\\n    border-radius: 3px;\\n    background: radial-gradient(#ffffff, #949494); }\\n\", \"\"]);\n\n"
+              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \".home {\\n  background: linear-gradient(270deg, #636ab6, #76369c, #223cb8);\\n  background-size: 400% 400%;\\n  -webkit-animation: AnimationName 20s ease infinite;\\n  -moz-animation: AnimationName 20s ease infinite;\\n  animation: AnimationName 20s ease infinite; }\\n  .home .hero {\\n    width: 100%;\\n    height: 80vh;\\n    box-sizing: border-box;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    padding: 24px 0 0;\\n    color: #fff; }\\n    .home .hero h2 {\\n      margin: 0 0 24px; }\\n  .home iframe {\\n    width: 90%;\\n    padding: 0px;\\n    height: 300px;\\n    border-radius: 3px;\\n    background: radial-gradient(transparent, rgba(0, 0, 0, 0.44)); }\\n\\n@-webkit-keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\\n@-moz-keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\\n@keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\", \"\"]);\n\n"
             },
             {
               "id": 1,
@@ -26752,7 +26752,7 @@
           "name": "/Users/ilyavmn/spider/node_modules/css-loader/dist/cjs.js??ref--4-oneOf-0-1!/Users/ilyavmn/spider/node_modules/sass-loader/lib/loader.js??ref--4-oneOf-0-2!/Users/ilyavmn/spider/src/style/index.scss",
           "index": 0,
           "index2": 1,
-          "size": 614,
+          "size": 1345,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -26785,7 +26785,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \".home {\\n  background: #c5c5c5; }\\n  .home .hero {\\n    width: 100%;\\n    height: 80vh;\\n    box-sizing: border-box;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    padding: 24px 0 0;\\n    color: #fff; }\\n    .home .hero h2 {\\n      margin: 0 0 24px; }\\n  .home iframe {\\n    border: 1px solid #d6d6d6;\\n    width: 90vw;\\n    padding: 0px;\\n    height: 300px;\\n    border-radius: 3px;\\n    background: radial-gradient(#ffffff, #949494); }\\n\", \"\"]);\n\n"
+          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \".home {\\n  background: linear-gradient(270deg, #636ab6, #76369c, #223cb8);\\n  background-size: 400% 400%;\\n  -webkit-animation: AnimationName 20s ease infinite;\\n  -moz-animation: AnimationName 20s ease infinite;\\n  animation: AnimationName 20s ease infinite; }\\n  .home .hero {\\n    width: 100%;\\n    height: 80vh;\\n    box-sizing: border-box;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    padding: 24px 0 0;\\n    color: #fff; }\\n    .home .hero h2 {\\n      margin: 0 0 24px; }\\n  .home iframe {\\n    width: 90%;\\n    padding: 0px;\\n    height: 300px;\\n    border-radius: 3px;\\n    background: radial-gradient(transparent, rgba(0, 0, 0, 0.44)); }\\n\\n@-webkit-keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\\n@-moz-keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\\n@keyframes AnimationName {\\n  0% {\\n    background-position: 0% 50%; }\\n  50% {\\n    background-position: 100% 50%; }\\n  100% {\\n    background-position: 0% 50%; } }\\n\", \"\"]);\n\n"
         },
         {
           "id": 1,
@@ -26884,7 +26884,7 @@
           "files": [
             "*"
           ],
-          "hash": "f7135066d2d0abeb327b",
+          "hash": "3e0f54ac4275c5be655a",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -26929,7 +26929,7 @@
                 "ModuleConcatenation bailout: Module is not an ECMAScript module"
               ],
               "depth": 0,
-              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"@media only screen and (max-width: 639px) {\\n  header .logo {\\n    position: relative;\\n    z-index: 3; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    position: fixed;\\n    justify-content: flex-start;\\n    top: 0;\\n    left: 0;\\n    transform: translateX(100%);\\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\\n    background: #fff;\\n    z-index: 1;\\n    padding: 76px 20px;\\n    width: 100%;\\n    height: 100vh;\\n    box-sizing: border-box; }\\n    header .navigation-links a {\\n      padding: 1rem;\\n      font-size: 1.4rem; }\\n    header .navigation-links:after {\\n      content: '';\\n      background: inherit;\\n      width: 100px;\\n      height: 100vh;\\n      position: absolute;\\n      top: 0;\\n      right: -100px; }\\n  header .hamburger {\\n    display: block;\\n    position: relative;\\n    z-index: 1;\\n    -webkit-user-select: none;\\n    user-select: none; }\\n    header .hamburger .patty {\\n      display: block;\\n      width: 33px;\\n      height: 4px;\\n      margin-bottom: 5px;\\n      position: relative;\\n      background: #444;\\n      border-radius: 3px;\\n      z-index: 1;\\n      transform-origin: 4px 0px;\\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\\n      header .hamburger .patty:first-child {\\n        transform-origin: 0% 0%; }\\n      header .hamburger .patty:nth-child(3) {\\n        transform-origin: 0% 100%; }\\n  header.menu-open .logo {\\n    position: fixed;\\n    top: 9px; }\\n  header.menu-open .navigation-links {\\n    transform: translate(0, 0); }\\n  header.menu-open .hamburger {\\n    position: fixed;\\n    right: 20px; }\\n    header.menu-open .hamburger .patty {\\n      opacity: 1;\\n      transform: rotate(45deg) translate(2px, -6px);\\n      background: #444; }\\n      header.menu-open .hamburger .patty:nth-child(2) {\\n        opacity: 0;\\n        transform: rotate(0deg) scale(0.2, 0.2); }\\n      header.menu-open .hamburger .patty:nth-child(3) {\\n        transform: rotate(-45deg) translate(3px, 5px); } }\\n\\n/* \\n * Transform all the slices of hamburger\\n * into a crossmark.\\n */\\n/*\\n * But let's hide the middle one.\\n */\\n/*\\n * Ohyeah and the last one should go the other direction\\n */\\n/*\\n * Make this absolute positioned\\n * at the top left of the screen\\n */\\n\", \"\"]);\n\n"
+              "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"@media only screen and (max-width: 639px) {\\n  header .logo {\\n    position: relative;\\n    z-index: 3; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    position: fixed;\\n    justify-content: flex-start;\\n    top: 0;\\n    left: 0;\\n    transform: translateX(100%);\\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\\n    background: #fff;\\n    z-index: 1;\\n    padding: 76px 20px;\\n    width: 100%;\\n    height: 100vh;\\n    box-sizing: border-box; }\\n    header .navigation-links a {\\n      padding: 1rem;\\n      font-size: 1.4rem; }\\n    header .navigation-links:after {\\n      content: '';\\n      background: inherit;\\n      width: 100px;\\n      height: 100vh;\\n      position: absolute;\\n      top: 0;\\n      right: -100px; }\\n  header .hamburger {\\n    display: block;\\n    position: relative;\\n    z-index: 1;\\n    -webkit-user-select: none;\\n    user-select: none; }\\n    header .hamburger .patty {\\n      display: block;\\n      width: 33px;\\n      height: 4px;\\n      margin-bottom: 5px;\\n      position: relative;\\n      background: #fff;\\n      border-radius: 3px;\\n      z-index: 1;\\n      transform-origin: 4px 0px;\\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\\n      header .hamburger .patty:first-child {\\n        transform-origin: 0% 0%; }\\n      header .hamburger .patty:nth-child(3) {\\n        transform-origin: 0% 100%; }\\n  header.menu-open .logo {\\n    position: fixed;\\n    top: 9px; }\\n  header.menu-open .navigation-links {\\n    transform: translate(0, 0); }\\n  header.menu-open .hamburger {\\n    position: fixed;\\n    right: 20px; }\\n    header.menu-open .hamburger .patty {\\n      opacity: 1;\\n      transform: rotate(45deg) translate(2px, -6px);\\n      background: #444; }\\n      header.menu-open .hamburger .patty:nth-child(2) {\\n        opacity: 0;\\n        transform: rotate(0deg) scale(0.2, 0.2); }\\n      header.menu-open .hamburger .patty:nth-child(3) {\\n        transform: rotate(-45deg) translate(3px, 5px); } }\\n\\n/* \\n * Transform all the slices of hamburger\\n * into a crossmark.\\n */\\n/*\\n * But let's hide the middle one.\\n */\\n/*\\n * Ohyeah and the last one should go the other direction\\n */\\n/*\\n * Make this absolute positioned\\n * at the top left of the screen\\n */\\n\", \"\"]);\n\n"
             },
             {
               "id": 1,
@@ -27032,7 +27032,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"@media only screen and (max-width: 639px) {\\n  header .logo {\\n    position: relative;\\n    z-index: 3; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    position: fixed;\\n    justify-content: flex-start;\\n    top: 0;\\n    left: 0;\\n    transform: translateX(100%);\\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\\n    background: #fff;\\n    z-index: 1;\\n    padding: 76px 20px;\\n    width: 100%;\\n    height: 100vh;\\n    box-sizing: border-box; }\\n    header .navigation-links a {\\n      padding: 1rem;\\n      font-size: 1.4rem; }\\n    header .navigation-links:after {\\n      content: '';\\n      background: inherit;\\n      width: 100px;\\n      height: 100vh;\\n      position: absolute;\\n      top: 0;\\n      right: -100px; }\\n  header .hamburger {\\n    display: block;\\n    position: relative;\\n    z-index: 1;\\n    -webkit-user-select: none;\\n    user-select: none; }\\n    header .hamburger .patty {\\n      display: block;\\n      width: 33px;\\n      height: 4px;\\n      margin-bottom: 5px;\\n      position: relative;\\n      background: #444;\\n      border-radius: 3px;\\n      z-index: 1;\\n      transform-origin: 4px 0px;\\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\\n      header .hamburger .patty:first-child {\\n        transform-origin: 0% 0%; }\\n      header .hamburger .patty:nth-child(3) {\\n        transform-origin: 0% 100%; }\\n  header.menu-open .logo {\\n    position: fixed;\\n    top: 9px; }\\n  header.menu-open .navigation-links {\\n    transform: translate(0, 0); }\\n  header.menu-open .hamburger {\\n    position: fixed;\\n    right: 20px; }\\n    header.menu-open .hamburger .patty {\\n      opacity: 1;\\n      transform: rotate(45deg) translate(2px, -6px);\\n      background: #444; }\\n      header.menu-open .hamburger .patty:nth-child(2) {\\n        opacity: 0;\\n        transform: rotate(0deg) scale(0.2, 0.2); }\\n      header.menu-open .hamburger .patty:nth-child(3) {\\n        transform: rotate(-45deg) translate(3px, 5px); } }\\n\\n/* \\n * Transform all the slices of hamburger\\n * into a crossmark.\\n */\\n/*\\n * But let's hide the middle one.\\n */\\n/*\\n * Ohyeah and the last one should go the other direction\\n */\\n/*\\n * Make this absolute positioned\\n * at the top left of the screen\\n */\\n\", \"\"]);\n\n"
+          "source": "exports = module.exports = require(\"../../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"@media only screen and (max-width: 639px) {\\n  header .logo {\\n    position: relative;\\n    z-index: 3; }\\n  header .navigation-links {\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n    position: fixed;\\n    justify-content: flex-start;\\n    top: 0;\\n    left: 0;\\n    transform: translateX(100%);\\n    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);\\n    background: #fff;\\n    z-index: 1;\\n    padding: 76px 20px;\\n    width: 100%;\\n    height: 100vh;\\n    box-sizing: border-box; }\\n    header .navigation-links a {\\n      padding: 1rem;\\n      font-size: 1.4rem; }\\n    header .navigation-links:after {\\n      content: '';\\n      background: inherit;\\n      width: 100px;\\n      height: 100vh;\\n      position: absolute;\\n      top: 0;\\n      right: -100px; }\\n  header .hamburger {\\n    display: block;\\n    position: relative;\\n    z-index: 1;\\n    -webkit-user-select: none;\\n    user-select: none; }\\n    header .hamburger .patty {\\n      display: block;\\n      width: 33px;\\n      height: 4px;\\n      margin-bottom: 5px;\\n      position: relative;\\n      background: #fff;\\n      border-radius: 3px;\\n      z-index: 1;\\n      transform-origin: 4px 0px;\\n      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\\n      header .hamburger .patty:first-child {\\n        transform-origin: 0% 0%; }\\n      header .hamburger .patty:nth-child(3) {\\n        transform-origin: 0% 100%; }\\n  header.menu-open .logo {\\n    position: fixed;\\n    top: 9px; }\\n  header.menu-open .navigation-links {\\n    transform: translate(0, 0); }\\n  header.menu-open .hamburger {\\n    position: fixed;\\n    right: 20px; }\\n    header.menu-open .hamburger .patty {\\n      opacity: 1;\\n      transform: rotate(45deg) translate(2px, -6px);\\n      background: #444; }\\n      header.menu-open .hamburger .patty:nth-child(2) {\\n        opacity: 0;\\n        transform: rotate(0deg) scale(0.2, 0.2); }\\n      header.menu-open .hamburger .patty:nth-child(3) {\\n        transform: rotate(-45deg) translate(3px, 5px); } }\\n\\n/* \\n * Transform all the slices of hamburger\\n * into a crossmark.\\n */\\n/*\\n * But let's hide the middle one.\\n */\\n/*\\n * Ohyeah and the last one should go the other direction\\n */\\n/*\\n * Make this absolute positioned\\n * at the top left of the screen\\n */\\n\", \"\"]);\n\n"
         },
         {
           "id": 1,

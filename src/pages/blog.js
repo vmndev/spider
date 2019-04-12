@@ -5,10 +5,11 @@ import { Link } from 'components/Router'
 
 export default function Blog() {
   const { posts } = useRouteData()
+  console.log(useRouteData())
   return (
     <div>
       <h1>It's blog time.</h1>
-      <div>
+      {/* <div>
         <a href="#bottom" id="top">
           Scroll to bottom!
         </a>
@@ -24,7 +25,7 @@ export default function Blog() {
       </ul>
       <a href="#top" id="bottom">
         Scroll to top!
-      </a>
+      </a> */}
     </div>
   )
 }
