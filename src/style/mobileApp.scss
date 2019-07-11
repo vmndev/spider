@@ -34,6 +34,30 @@
                 top: 0;
                 right: -100px;
             }
+            .language-nemu {
+                display: none;                
+                &.mobile-menu{
+                    position: absolute;
+                    color: #444;
+                    bottom: 20px;
+                    right: 0;
+                    display: flex;
+                    padding: 0;
+                    .menu {
+                        display: flex;
+                        position: relative;
+                        opacity: 1;
+                        max-height: 50px;
+                        min-width: 85px;
+                        .menu-item:first-of-type{
+                            border-right: 1px solid #444;
+                        }
+                        .current{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
         }
         .hamburger{
             display: block;

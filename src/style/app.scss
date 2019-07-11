@@ -36,8 +36,9 @@ header{
   .navigation-links{
     display: flex;
     flex-direction: row;
-    // width: 50%;
-    // justify-content: space-evenly;
+    font-size: 14px;
+    height: 50px;
+    align-items: center;
     a{
       color: #fff;
       padding: 0 15px;
@@ -51,7 +52,9 @@ header{
       position: relative;
       padding: 0 15px;
       min-width: 85px;
-      font-size: 14px;
+      &.mobile-menu{
+        display: none;
+      }
       .current-language{
         
       }
@@ -60,12 +63,13 @@ header{
         max-height: 0;
         overflow: hidden;
         position: absolute;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
         left: 0;
         border-radius: 0 0 3px 3px;
         .menu-item{
           padding: 10px 15px;
           cursor: pointer;
+          min-width: 85px;
         }
       }
       &:hover{

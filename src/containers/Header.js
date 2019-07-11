@@ -31,7 +31,7 @@ class Header extends Component{
 
         return(
             <header className={`${!!isMenuOpen && 'menu-open'}`}>   
-                <Link onClick={this.closeMenu} to="/">
+                <Link onClick={this.closeMenu} to={`${language === 'he' ? '/he' : '/'}`}>
                     {/* <Icon name={'cube'} /> */}
                     <img className="logo" alt="spidermesh logo" src="/img/logo-white.svg" />
                 </Link>

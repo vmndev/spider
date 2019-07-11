@@ -9,6 +9,8 @@ export default {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css?family=Heebo:400,500|Quicksand:400,500" rel="stylesheet" />
+
+    <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
       </Head>
       <Body>{children}</Body>
     </Html>
@@ -30,6 +32,8 @@ export default {
       'about',
       'web_content',
       'scanning',
+      'services',
+      'gallery',
     ]
 
     let routes = [{
